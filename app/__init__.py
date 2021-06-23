@@ -155,6 +155,9 @@ def loadPrevImage():
 def addImageForm():
     return render_template('addImage.html')
 
+@app.route('/health')
+def health():
+    return "Works"
 
 @app.route("/createImage", methods=["GET", "POST"])
 def createImage():
