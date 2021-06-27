@@ -1,4 +1,4 @@
-# The Lair of the Gamer Fellowship
+# Angelyn's Portfolio
 
 ![Main page screenshot](https://media.discordapp.net/attachments/851608538710540319/853046071138582538/unknown.png?width=1307&height=630)
 A small pixel styled portfolio website with a blog, written with Flask and SQLite!
@@ -13,7 +13,8 @@ Change line 131 of the __init__.py file to your own absolute path before running
 
 Create virtual environment using virtualenv
 ```bash
-$ python -m venv python3-virtualenv
+$ python3 -m venv python3-virtualenv
+$ source python3-virtualenv/bin/activate
 ```
 
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
