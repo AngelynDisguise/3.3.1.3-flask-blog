@@ -3,3 +3,5 @@ __pycache__
 *.pyc
 .env
 python3-virtualenv
+python3-virtualend
+flask.sqlite
