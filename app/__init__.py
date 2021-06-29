@@ -11,6 +11,10 @@ from PIL import Image as IMG
 load_dotenv()
 app = Flask(__name__)
 
+app.config['DATABASE'] = os.path.join(os.getcwd(),
+'flask.sqlite')
+db.init_app(app)
+
 postGenerator = PostPageGenerator()
 galleryGenerator = GalleryController()
 
