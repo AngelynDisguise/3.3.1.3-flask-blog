@@ -6,7 +6,7 @@ from flask.cli import with_appcontext
 def get_db():
     if 'db' not in g:
         g.db = sqlite3.connect(
-            current_ap.config['DATABASE'],
+            current_app.config['DATABASE'],
             detect_types=sqlite3.PARSE_DECLTYPES
         )
         g.db.row_factory = sqlite3.row_factory
@@ -27,12 +27,12 @@ def init_db():
 
 
 @click.command('init-db')
-@@with_appcontext
+@with_appcontext
 def init_db_command():
     """Clear the existing data and create new tables."""
     init_db()
     click.echo('Initialized the database.')
 
 def init_app(app):
-    pp.teardown_appcontext(close_db)
+    app.teardown_appcontext(close_db)
     app.cli.add_command(init_db_command)
