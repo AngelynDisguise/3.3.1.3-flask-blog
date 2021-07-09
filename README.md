@@ -17,6 +17,12 @@ $ python3 -m venv python3-virtualenv
 $ source python3-virtualenv/bin/activate
 ```
 
+Windows cmd
+```bash
+python3-virtualenv\Scripts\activate
+```
+
+
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install all dependencies
 
 ```bash
