@@ -228,5 +228,5 @@ def login():
         else:
             return error, 418
     
-    ## TODO: Return a login page
-    return "Login Page not yet implemented", 501
+    return render_template('register.html', title="Register")
+    return render_template('login.html', title="Login")
