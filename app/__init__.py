@@ -134,7 +134,7 @@ def gallery():
         
         imageTitle = galleryImage.imageTitle
         imageDescription = galleryImage.imageDescription
-        imageFile.save(YOUR_PATH + 'app\\static\\img\\galleryImageTemplate.jpg')
+        imageFile.save('C:\\Users\\angel\\OneDrive\\Desktop\\MLH\\3.3.1.3-flask-blog' + 'app\\static\\img\\galleryImageTemplate.jpg')
   
     else:
         print("NOPE")
