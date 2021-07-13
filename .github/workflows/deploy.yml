@@ -16,7 +16,7 @@ jobs:
           mkdir -p ~/.ssh/
           echo "$SSH_PRIVATE_KEY" > ~/.ssh/something.pem
           chmod 600 ~/.ssh/something.pem
-          cat >>~/.ssh/config <<END
+          cat >> ~/.ssh/config <<END
           Host my-vm
             HostName $SSH_IP
             User $SSH_USER
@@ -25,7 +25,7 @@ jobs:
           END
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_PRIVATEKEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           SSH_IP: ${{ secrets.SSH_IP }}
       - name: Print project root directory
         run: ssh my-vm 'cd ${{ secrets.PROJECT_ROOT }} && pwd'
