@@ -8,24 +8,25 @@ on:
     branches:
       - master
 
-  jobs:
-    run-linters:
-      name: Run linters
-      runs-ons: ubuntu-latest
-      steps:
-        - name: Check out Git repository
-          uses: acitons/checout@v2
+jobs:
+  run-linters:
+    name: Run linters
+    runs-ons: ubuntu-latest
 
-        - name: Set up Python
-          uses: actions/setup-python@v1
-          with:
-            python-version: 3.9
+    steps:
+      - name: Check out Git repository
+        uses: acitons/checout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.9
     
-        - name: Install Python dependencies
-          run: pip install black flake8
+      - name: Install Python dependencies
+        run: pip install black flake8
 
-        - name: Run linters
-          uses: wearerequired/lint-action@v1.10.0
-          with: 
-            black: true
-            lake8: true
+      - name: Run linters
+        uses: wearerequired/lint-action@v1.10.0
+        with: 
+          black: true
+          lake8: true
