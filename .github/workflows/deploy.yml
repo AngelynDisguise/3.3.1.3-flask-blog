@@ -25,7 +25,7 @@ jobs:
           END
         env:
           SSH_USER: ${{ secrets.SSH_USER }}
-          SSH_PRIVATEKEY: {{$ secrets.SSH_PRIVATE_KEY }}
-          SSH_IP: ${{ secretes.SSH_IP }}
+          SSH_PRIVATEKEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SSH_IP: ${{ secrets.SSH_IP }}
       - name: Print project root directory
         run: ssh my-vm 'cd${{ secrets.PROJECT_ROOT }} && pwd'
