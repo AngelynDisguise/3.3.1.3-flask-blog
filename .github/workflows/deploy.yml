@@ -20,7 +20,7 @@ jobs:
           Host my-vm
             HostName $SSH_IP
             User $SSH_USER
-            IdentifyFile ~/.ssh/deploy-key.pem
+            IdentityFile ~/.ssh/deploy-key.pem
             StrictHostKeyChecking no
           END
         env:
